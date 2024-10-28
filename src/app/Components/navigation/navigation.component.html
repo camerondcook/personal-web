@@ -1,7 +1,41 @@
-<nav>
-    <a class="button" routerLink="" routerLinkActive="activebutton" [routerLinkActiveOptions]="{exact: true}">Home</a> 
-    <a class="button" routerLink="/projects" routerLinkActive="activebutton">Projects</a> 
-    <a class="button" routerLink="/blog" routerLinkActive="activebutton">Blog</a> 
-    <a class="button" routerLink="/contact" routerLinkActive="activebutton">Contact</a> 
-</nav>
-<router-outlet />
+<div class="flex items-center bg-gray-800 p-4">
+    <div class="flex">
+        <img class="mr-2" src="assets/gorillaIconWhite32px.png" alt="Logo">
+        <h1 class="text-3xl font-serif italic text-white flex-shrink-0 flex-grow-0 mr-20">Cameron Cook</h1>
+    </div>
+    <nav class="flex justify-center items-center">
+        <ul class="flex space-x-4 text-white italic">
+            <li>
+                <a class="hover:bg-gray-900" routerLink="" routerLinkActive="activebutton" [routerLinkActiveOptions]="{exact: true}">Home</a> 
+            </li>
+            <li>
+                <a class="hover:bg-gray-900" routerLink="/projects" routerLinkActive="activebutton">Projects</a> 
+            </li>
+            <li>
+                <a class="hover:bg-gray-900" routerLink="/blog" routerLinkActive="activebutton">Blog</a> 
+            </li>
+            <li>
+                <a class="hover:bg-gray-900" routerLink="/contact" routerLinkActive="activebutton">Contact</a> 
+            </li>
+        </ul>
+    </nav>
+</div>
+<main class="mt-4 p-1">
+    <router-outlet />
+</main>
+
+
+<!--
+<nav class="bg-gray-800 text-white fixed w-full top-0 left-0 p-4 z-10">
+    <ul class="flex space-x-4">
+      <li><a routerLink="/home" routerLinkActive="active" class="block text-white text-center py-2 px-4 hover:bg-gray-900">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" class="block text-white text-center py-2 px-4 hover:bg-gray-900">About</a></li>
+      <li><a routerLink="/services" routerLinkActive="active" class="block text-white text-center py-2 px-4 hover:bg-gray-900">Services</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" class="block text-white text-center py-2 px-4 hover:bg-gray-900">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="mt-20 p-5">
+    <router-outlet></router-outlet>
+  </main>
+
+-->
